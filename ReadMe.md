@@ -1,5 +1,7 @@
 ## LLVM Toolchain Maker
 
+![](xcode.png)
+
 ```bash
 sh llvm_toolchain_maker.sh
 ```
