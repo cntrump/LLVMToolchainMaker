@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
-llvm_version=7.0.0
+llvm_version=11.0.0
 llvm_archive="clang+llvm-${llvm_version}-x86_64-apple-darwin"
-llvm_url_for_macos="http://releases.llvm.org/${llvm_version}/${llvm_archive}.tar.xz"
+llvm_url_for_macos="https://github.com/llvm/llvm-project/releases/download/llvmorg-${llvm_version}/${llvm_archive}.tar.xz"
 toolchain_dir="LLVM_${llvm_version}.xctoolchain"
 
 echo checking "${llvm_archive}.tar.xz"
@@ -11,7 +11,7 @@ echo checking "${llvm_archive}.tar.xz"
 if [ ! -f "${llvm_archive}.tar.xz" ];
 then
 	echo not found, downloading...
-	curl -o ${llvm_archive}.tar.xz ${llvm_url_for_macos} 
+	curl -Lo ${llvm_archive}.tar.xz ${llvm_url_for_macos} 
 fi
 
 tar xvJf ${llvm_archive}.tar.xz
