@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-llvm_version=11.0.0
-llvm_archive="clang+llvm-${llvm_version}-x86_64-apple-darwin"
+llvm_version=19.1.7
+llvm_archive="LLVM-${llvm_version}-macOS-ARM64"
 llvm_url_for_macos="https://github.com/llvm/llvm-project/releases/download/llvmorg-${llvm_version}/${llvm_archive}.tar.xz"
 toolchain_dir="LLVM_${llvm_version}.xctoolchain"
 
